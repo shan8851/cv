@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: 'Asam Shan | Senior Full Stack Engineer',
   description:
     'Senior Full Stack Engineer shipping production web3 applications across payments, bridging, and staking. Currently at Polygon.',
-  metadataBase: new URL('https://www.shan8851.com'),
+  metadataBase: new URL('https://cv.shan8851.com'),
   keywords: [
     'Asam Shan',
     'Full Stack Engineer',
@@ -43,10 +43,16 @@ export const metadata: Metadata = {
     title: 'Asam Shan | Senior Full Stack Engineer',
     description:
       'Senior Full Stack Engineer shipping production web3 applications across payments, bridging, and staking. Currently at Polygon.',
-    url: 'https://www.shan8851.com',
+    url: 'https://cv.shan8851.com',
     siteName: 'Asam Shan',
     locale: 'en_GB',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        alt: 'Asam Shan — Senior Full Stack Engineer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -54,6 +60,12 @@ export const metadata: Metadata = {
     description:
       'Senior Full Stack Engineer shipping production web3 applications. Currently at Polygon.',
     creator: '@shan8851',
+    images: [
+      {
+        url: '/opengraph-image',
+        alt: 'Asam Shan — Senior Full Stack Engineer',
+      },
+    ],
   },
   robots: {
     index: true,
