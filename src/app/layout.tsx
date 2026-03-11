@@ -21,13 +21,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Asam Shan | Senior Full Stack Engineer',
+  title: 'Asam Shan | Senior Frontend Engineer',
   description:
-    'Senior Full Stack Engineer shipping production web3 applications across payments, bridging, and staking. Currently at Polygon.',
+    'Frontend-focused engineer shipping production web3 products across bridging, governance, and analytics. Currently at Polygon.',
   metadataBase: new URL('https://cv.shan8851.com'),
   keywords: [
     'Asam Shan',
-    'Full Stack Engineer',
+    'Frontend Engineer',
     'Web3',
     'Polygon',
     'TypeScript',
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Asam Shan' }],
   creator: 'Asam Shan',
   openGraph: {
-    title: 'Asam Shan | Senior Full Stack Engineer',
+    title: 'Asam Shan | Senior Frontend Engineer',
     description:
-      'Senior Full Stack Engineer shipping production web3 applications across payments, bridging, and staking. Currently at Polygon.',
+      'Frontend-focused engineer shipping production web3 products across bridging, governance, and analytics. Currently at Polygon.',
     url: 'https://cv.shan8851.com',
     siteName: 'Asam Shan',
     locale: 'en_GB',
@@ -50,20 +50,20 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/opengraph-image',
-        alt: 'Asam Shan — Senior Full Stack Engineer',
+        alt: 'Asam Shan — Senior Frontend Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Asam Shan | Senior Full Stack Engineer',
+    title: 'Asam Shan | Senior Frontend Engineer',
     description:
-      'Senior Full Stack Engineer shipping production web3 applications. Currently at Polygon.',
+      'Frontend-focused engineer shipping production web3 products. Currently at Polygon.',
     creator: '@shan8851',
     images: [
       {
         url: '/opengraph-image',
-        alt: 'Asam Shan — Senior Full Stack Engineer',
+        alt: 'Asam Shan — Senior Frontend Engineer',
       },
     ],
   },

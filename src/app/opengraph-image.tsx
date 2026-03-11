@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Asam Shan — Senior Full Stack Engineer';
+export const alt = 'Asam Shan — Senior Frontend Engineer';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -75,7 +75,7 @@ const OgImage = () =>
               marginBottom: '32px',
             }}
           >
-            Senior Full Stack Engineer (Web3 Product)
+            Senior Frontend Engineer (Web3 Product)
           </div>
 
           {/* Tags */}

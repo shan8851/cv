@@ -27,6 +27,7 @@ export type CVData = {
   readonly contacts: ReadonlyArray<ContactLink>;
   readonly summary: string;
   readonly skills: ReadonlyArray<string>;
+  readonly communityAndMentorship: ReadonlyArray<string>;
   readonly experience: ReadonlyArray<Experience>;
   readonly earlierRoles: ReadonlyArray<EarlierRole>;
   readonly publicWork: ReadonlyArray<PublicWork>;

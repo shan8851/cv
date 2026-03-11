@@ -3,6 +3,7 @@ import { ScanLine } from '@/components/scanLine';
 import { Header } from '@/components/header';
 import { Summary } from '@/components/summary';
 import { CoreStrengths } from '@/components/coreStrengths';
+import { CommunityMentorship } from '@/components/communityMentorship';
 import { Experience } from '@/components/experience';
 import { PublicWork } from '@/components/publicWork';
 import { StatusBar } from '@/components/statusBar';
@@ -20,16 +21,17 @@ const Home = () => (
         contacts={CV_DATA.contacts}
         downloads={[
           { label: 'Download PDF', href: '/shan-cv.pdf' },
-          { label: 'Download DOCX', href: '/shan-cv.docx' },
         ]}
       />
       <Summary text={CV_DATA.summary} />
       <CoreStrengths skills={CV_DATA.skills} />
+      <CommunityMentorship items={CV_DATA.communityAndMentorship} delay={2100} />
       <Experience
         experience={CV_DATA.experience}
         earlierRoles={CV_DATA.earlierRoles}
+        delay={2400}
       />
-      <PublicWork work={CV_DATA.publicWork} />
+      <PublicWork work={CV_DATA.publicWork} delay={3100} />
     </main>
 
     <StatusBar />
