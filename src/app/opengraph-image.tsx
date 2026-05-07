@@ -16,80 +16,52 @@ const OgImage = () =>
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '80px',
-          background: '#0A0A0F',
-          fontFamily: 'monospace',
+          background: '#0F0F0F',
         }}
       >
-        {/* Decorative top bar */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            marginBottom: '16px',
-          }}
-        >
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#FF5F57' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#FEBC2E' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28C840' }} />
-          <span style={{ color: '#4A4A5E', fontSize: 16, marginLeft: 12 }}>shan@portfolio</span>
-        </div>
-
-        {/* Terminal border */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            border: '1px solid #1E1E2E',
-            borderRadius: '12px',
-            padding: '48px',
-            flex: 1,
             justifyContent: 'center',
+            flex: 1,
           }}
         >
-          {/* Prompt line */}
-          <div style={{ display: 'flex', alignItems: 'baseline', marginBottom: '24px' }}>
-            <span style={{ color: '#00FFCC', fontSize: 24 }}>$</span>
-            <span style={{ color: '#6B6B80', fontSize: 24, marginLeft: 12 }}>cat about.md</span>
-          </div>
-
-          {/* Name */}
           <div
             style={{
-              fontSize: 72,
-              fontWeight: 800,
-              color: '#00FFCC',
-              letterSpacing: '-2px',
+              fontSize: 96,
+              color: '#E8E4DF',
+              fontStyle: 'italic',
               lineHeight: 1,
-              marginBottom: '16px',
+              marginBottom: '20px',
             }}
           >
             Asam Shan
           </div>
 
-          {/* Title */}
           <div
             style={{
               fontSize: 28,
-              color: '#6B6B80',
-              marginBottom: '32px',
+              color: '#9A9590',
+              fontFamily: 'monospace',
+              marginBottom: '40px',
             }}
           >
             Senior Frontend Engineer (Web3 Product)
           </div>
 
-          {/* Tags */}
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             {['Polygon', 'TypeScript', 'React', 'Next.js', 'EVM'].map((tag) => (
               <div
                 key={tag}
                 style={{
                   padding: '8px 16px',
-                  border: '1px solid #1E1E2E',
-                  borderRadius: '6px',
-                  color: '#E0E0E8',
-                  fontSize: 18,
-                  background: '#12121A',
+                  border: '1px solid #2A2A2A',
+                  borderRadius: '100px',
+                  color: '#9A9590',
+                  fontSize: 16,
+                  fontFamily: 'monospace',
+                  background: '#171717',
                 }}
               >
                 {tag}
@@ -98,18 +70,19 @@ const OgImage = () =>
           </div>
         </div>
 
-        {/* Status bar */}
         <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
-            marginTop: '16px',
-            color: '#4A4A5E',
+            borderTop: '1px solid #2A2A2A',
+            paddingTop: '20px',
+            color: '#5C5854',
             fontSize: 14,
+            fontFamily: 'monospace',
           }}
         >
-          <span>UTF-8 · TypeScript · Spaces: 2</span>
           <span>shan8851.com</span>
+          <span style={{ color: '#D4A039' }}>cv.shan8851.com</span>
         </div>
       </div>
     ),
