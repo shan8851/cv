@@ -3,18 +3,16 @@ type SectionHeadingProps = {
   readonly delay?: number;
 };
 
-export const SectionHeading = ({ title, delay = 0 }: SectionHeadingProps) => (
+export const SectionHeading = ({ title, delay }: SectionHeadingProps) => (
   <div
-    className="animate-in flex items-center gap-3 mb-8 font-mono"
-    style={{ animationDelay: `${delay}ms` }}
+    className="mb-6"
+    style={delay ? { animationDelay: `${delay}ms` } : undefined}
   >
-    <span className="text-text-comment text-sm">{'//'}</span>
-    <span className="text-text-comment text-sm">──</span>
-    <h2 className="text-text-primary text-lg font-semibold tracking-wide uppercase">
+    <h2
+      className="text-2xl md:text-3xl animate-in"
+      style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic' }}
+    >
       {title}
     </h2>
-    <span className="text-text-comment text-sm flex-1 overflow-hidden">
-      {'─'.repeat(40)}
-    </span>
   </div>
 );

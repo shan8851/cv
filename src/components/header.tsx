@@ -1,5 +1,4 @@
 import { Mail, Github, Twitter, Globe, Download } from 'lucide-react';
-import { GlitchText } from './glitchText';
 import type { ContactLink } from '@/types/cv';
 
 const ICON_MAP = {
@@ -22,68 +21,48 @@ type HeaderProps = {
 };
 
 export const Header = ({ name, title, contacts, downloads = [] }: HeaderProps) => (
-  <header className="relative mb-16">
-    <div
-      className="animate-fade border border-border rounded-lg p-8 md:p-12 relative overflow-hidden"
-      style={{ animationDelay: '400ms', animationDuration: '0.8s' }}
+  <header className="mb-20 animate-in">
+    <h1
+      className="text-5xl md:text-7xl leading-[0.9] mb-4"
+      style={{ fontFamily: 'var(--font-serif)', fontStyle: 'normal' }}
     >
-      <div
-        className="absolute top-0 left-0 px-4 py-1 text-xs text-text-comment font-mono border-b border-r border-border rounded-br-lg"
-      >
-        shan@portfolio
-      </div>
+      {name}
+    </h1>
 
-      <div className="mt-4">
-        <h1
-          className="animate-in text-5xl md:text-7xl font-extrabold text-accent tracking-tight leading-none mb-3"
-          style={{ animationDelay: '600ms', fontFamily: 'var(--font-display)' }}
+    <p className="text-text-secondary text-sm md:text-base font-mono mb-8">
+      {title}
+    </p>
+
+    <div className="flex flex-wrap items-center gap-4">
+      {contacts.map((contact) => {
+        const Icon = ICON_MAP[contact.icon];
+        return (
+          <a
+            key={contact.label}
+            href={contact.url}
+            target={contact.icon === 'email' ? undefined : '_blank'}
+            rel={contact.icon === 'email' ? undefined : 'noopener noreferrer'}
+            className="group flex items-center gap-2 text-sm font-mono text-text-secondary transition-colors duration-200 hover:text-accent"
+          >
+            <Icon size={14} />
+            <span>{contact.label}</span>
+          </a>
+        );
+      })}
+
+      {downloads.map((dl) => (
+        <a
+          key={dl.label}
+          href={dl.href}
+          download
+          className="flex items-center gap-2 px-3 py-1.5 text-sm font-mono text-accent border border-accent/20 rounded transition-all duration-200 hover:bg-accent/10 hover:border-accent/40"
         >
-          <GlitchText text={name}>{name}</GlitchText>
-        </h1>
-
-        <p
-          className="animate-in text-text-secondary text-base md:text-lg font-mono mb-8"
-          style={{ animationDelay: '800ms' }}
-        >
-          {title}
-        </p>
-
-        <div className="flex flex-wrap gap-3">
-          {contacts.map((contact, index) => {
-            const Icon = ICON_MAP[contact.icon];
-            return (
-              <a
-                key={contact.label}
-                href={contact.url}
-                target={contact.icon === 'email' ? undefined : '_blank'}
-                rel={contact.icon === 'email' ? undefined : 'noopener noreferrer'}
-                className="animate-in group flex items-center gap-2 px-4 py-2 text-sm font-mono text-text-secondary border border-border rounded-md transition-all duration-200 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_var(--accent-glow)]"
-                style={{ animationDelay: `${1000 + index * 80}ms` }}
-              >
-                <Icon size={14} className="transition-colors duration-200 group-hover:text-accent" />
-                <span className="hidden sm:inline">{contact.label}</span>
-              </a>
-            );
-          })}
-        </div>
-
-        {downloads.length > 0 && (
-          <div className="flex flex-wrap gap-3 mt-5">
-            {downloads.map((dl, index) => (
-              <a
-                key={dl.label}
-                href={dl.href}
-                download
-                className="animate-in group flex items-center gap-2 px-4 py-2 text-sm font-mono text-accent border border-accent/30 rounded-md transition-all duration-200 hover:bg-accent/10 hover:border-accent hover:shadow-[0_0_20px_var(--accent-glow)]"
-                style={{ animationDelay: `${1320 + index * 80}ms` }}
-              >
-                <Download size={14} />
-                <span>{dl.label}</span>
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
+          <Download size={14} />
+          <span>{dl.label}</span>
+        </a>
+      ))}
     </div>
+
+    <div className="mt-10 h-px bg-gradient-to-r from-border via-border-hover to-transparent" />
   </header>
 );

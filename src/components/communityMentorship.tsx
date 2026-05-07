@@ -5,20 +5,19 @@ type CommunityMentorshipProps = {
   readonly delay?: number;
 };
 
-export const CommunityMentorship = ({ items, delay = 1500 }: CommunityMentorshipProps) => (
+export const CommunityMentorship = ({ items }: CommunityMentorshipProps) => (
   <section className="mb-16">
-    <SectionHeading title="Community & Mentorship" delay={delay} />
+    <SectionHeading title="Community & Mentorship" />
 
     <div className="space-y-3">
       {items.map((item, index) => (
-        <div
+        <p
           key={item}
-          className="animate-in flex gap-3 font-mono text-sm md:text-base"
-          style={{ animationDelay: `${delay + 100 + index * 80}ms` }}
+          className="animate-in text-sm font-mono text-text-primary leading-relaxed"
+          style={{ animationDelay: `${index * 50}ms` }}
         >
-          <span className="text-accent shrink-0">→</span>
-          <span className="text-text-primary leading-relaxed">{item}</span>
-        </div>
+          {item}
+        </p>
       ))}
     </div>
   </section>

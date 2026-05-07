@@ -1,23 +1,17 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono, IBM_Plex_Mono, Outfit } from 'next/font/google';
+import { Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-serif',
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: '--font-heading',
-  subsets: ['latin'],
-  weight: ['600', '700'],
-});
-
-const outfit = Outfit({
-  variable: '--font-display',
-  subsets: ['latin'],
-  weight: ['800'],
+  weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
@@ -80,8 +74,7 @@ const RootLayout = ({
 }>) => (
   <html lang="en">
     <body
-      className={`${jetbrainsMono.variable} ${ibmPlexMono.variable} ${outfit.variable} font-mono antialiased`}
-      style={{ fontFamily: 'var(--font-mono)' }}
+      className={`${instrumentSerif.variable} ${jetbrainsMono.variable} font-mono antialiased`}
     >
       {children}
     </body>

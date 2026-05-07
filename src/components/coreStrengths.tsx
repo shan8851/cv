@@ -5,18 +5,18 @@ type CoreStrengthsProps = {
   readonly delay?: number;
 };
 
-export const CoreStrengths = ({ skills, delay = 1400 }: CoreStrengthsProps) => (
+export const CoreStrengths = ({ skills }: CoreStrengthsProps) => (
   <section className="mb-16">
-    <SectionHeading title="Core Strengths" delay={delay} />
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+    <SectionHeading title="Core Strengths" />
+    <div className="flex flex-wrap gap-2">
       {skills.map((skill, index) => (
-        <div
+        <span
           key={skill}
-          className="animate-in px-4 py-2.5 text-sm font-mono text-text-secondary bg-bg-card border border-border rounded-md transition-all duration-200 hover:border-accent hover:text-accent hover:shadow-[0_0_12px_var(--accent-glow)] cursor-default"
-          style={{ animationDelay: `${delay + 100 + index * 50}ms` }}
+          className="animate-in px-3 py-1.5 text-xs font-mono text-text-secondary bg-bg-surface border border-border rounded-full transition-all duration-200 hover:border-border-hover hover:text-text-primary"
+          style={{ animationDelay: `${index * 30}ms` }}
         >
           {skill}
-        </div>
+        </span>
       ))}
     </div>
   </section>
