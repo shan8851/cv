@@ -1,22 +1,21 @@
 import { SectionHeading } from './sectionHeading';
 
+import type { CoreStrength } from '@/types/cv';
+
 type CoreStrengthsProps = {
-  readonly skills: ReadonlyArray<string>;
+  readonly strengths: ReadonlyArray<CoreStrength>;
   readonly delay?: number;
 };
 
-export const CoreStrengths = ({ skills }: CoreStrengthsProps) => (
-  <section className="mb-16">
+export const CoreStrengths = ({ strengths }: CoreStrengthsProps) => (
+  <section className="mb-20">
     <SectionHeading title="Core Strengths" />
-    <div className="flex flex-wrap gap-2">
-      {skills.map((skill, index) => (
-        <span
-          key={skill}
-          className="animate-in px-3 py-1.5 text-xs font-mono text-text-secondary bg-bg-surface border border-border rounded-full transition-all duration-200 hover:border-border-hover hover:text-text-primary"
-          style={{ animationDelay: `${index * 30}ms` }}
-        >
-          {skill}
-        </span>
+    <div className="animate-in space-y-4 text-sm leading-relaxed text-text-secondary">
+      {strengths.map((strength) => (
+        <div key={strength.label} className="grid min-w-0 gap-1 border-b border-border/55 pb-4 md:grid-cols-[13rem_1fr] md:gap-6">
+          <span className="min-w-0 font-medium text-text-primary">{strength.label}</span>
+          <span className="min-w-0">{strength.detail}</span>
+        </div>
       ))}
     </div>
   </section>

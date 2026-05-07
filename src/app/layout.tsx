@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import { Instrument_Serif, JetBrains_Mono } from 'next/font/google';
+import { IBM_Plex_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
 const instrumentSerif = Instrument_Serif({
   variable: '--font-serif',
   subsets: ['latin'],
   weight: '400',
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: '--font-body',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -15,13 +21,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Asam Shan | Senior Frontend Engineer',
+  title: 'Asam Shan | Senior Software Engineer',
   description:
-    'Frontend-focused engineer shipping production web3 products across bridging, governance, and analytics. Currently at Polygon.',
+    'Senior software engineer shipping production web3 systems and AI-assisted developer tooling. Currently at Polygon.',
   metadataBase: new URL('https://cv.shan8851.com'),
   keywords: [
     'Asam Shan',
-    'Frontend Engineer',
+    'Senior Software Engineer',
     'Web3',
     'Polygon',
     'TypeScript',
@@ -29,14 +35,16 @@ export const metadata: Metadata = {
     'Next.js',
     'EVM',
     'Blockchain',
+    'AI workflows',
+    'Developer tooling',
     'Software Engineer',
   ],
   authors: [{ name: 'Asam Shan' }],
   creator: 'Asam Shan',
   openGraph: {
-    title: 'Asam Shan | Senior Frontend Engineer',
+    title: 'Asam Shan | Senior Software Engineer',
     description:
-      'Frontend-focused engineer shipping production web3 products across bridging, governance, and analytics. Currently at Polygon.',
+      'Senior software engineer shipping production web3 systems and AI-assisted developer tooling. Currently at Polygon.',
     url: 'https://cv.shan8851.com',
     siteName: 'Asam Shan',
     locale: 'en_GB',
@@ -44,20 +52,20 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/opengraph-image',
-        alt: 'Asam Shan — Senior Frontend Engineer',
+        alt: 'Asam Shan — Senior Software Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Asam Shan | Senior Frontend Engineer',
+    title: 'Asam Shan | Senior Software Engineer',
     description:
-      'Frontend-focused engineer shipping production web3 products. Currently at Polygon.',
+      'Senior software engineer shipping web3 systems and AI-assisted developer tooling.',
     creator: '@shan8851',
     images: [
       {
         url: '/opengraph-image',
-        alt: 'Asam Shan — Senior Frontend Engineer',
+        alt: 'Asam Shan — Senior Software Engineer',
       },
     ],
   },
@@ -74,7 +82,7 @@ const RootLayout = ({
 }>) => (
   <html lang="en">
     <body
-      className={`${instrumentSerif.variable} ${jetbrainsMono.variable} font-mono antialiased`}
+      className={`${instrumentSerif.variable} ${ibmPlexSans.variable} ${jetbrainsMono.variable} antialiased`}
     >
       {children}
     </body>

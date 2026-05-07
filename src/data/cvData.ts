@@ -2,7 +2,7 @@ import type { CVData } from '@/types/cv';
 
 export const CV_DATA: CVData = {
   name: 'Asam Shan',
-  title: 'Senior Frontend Engineer (Web3 Product)',
+  title: 'Senior Software Engineer',
   contacts: [
     { label: 'asamshan456@gmail.com', url: 'mailto:asamshan456@gmail.com', icon: 'email' },
     { label: 'shan8851', url: 'https://github.com/shan8851', icon: 'github' },
@@ -10,25 +10,28 @@ export const CV_DATA: CVData = {
     { label: 'shan8851.com', url: 'https://www.shan8851.com/', icon: 'web' },
   ],
   summary:
-    'Frontend-focused engineer shipping production web3 products across bridging, governance, and analytics. I build clear UX for complex onchain workflows and improve release quality through CI/CD checks, e2e coverage, runbooks, and observability.',
-  skills: [
-    'TypeScript',
-    'React',
-    'Next.js',
-    'GraphQL',
-    'REST APIs',
-    'Redux/TanStack Query',
-    'EVM integrations (Viem/Wagmi)',
-    'Frontend architecture',
-    'CI/CD collaboration',
-    'e2e/integration testing',
-    'Datadog',
-    'Docs/runbooks',
-  ],
-  communityAndMentorship: [
-    'Mentor engineers through Coding Coach and The Mentoring Club, focused on technical growth and career progression.',
-    'Started Tech-Leap, a newsletter for developers navigating their early years in tech.',
-    'Write at shan8851.com on frontend architecture, engineering culture, and practical team workflows.',
+    'Senior software engineer shipping production web3 systems and building AI-assisted developer tooling. I work across TypeScript, React, Next.js, Node.js, EVM integrations, testing, runbooks, and agent workflows. Strong at turning messy systems into useful interfaces, judging whether technical output is genuinely good or just plausible, and giving clear feedback that raises engineering quality.',
+  strengths: [
+    {
+      label: 'Languages & frameworks',
+      detail: 'TypeScript, JavaScript, React, Next.js, Node.js',
+    },
+    {
+      label: 'Web3 systems',
+      detail: 'EVM integrations, Viem, Wagmi, bridging, governance, onchain UX',
+    },
+    {
+      label: 'AI workflows',
+      detail: 'OpenAI Codex, Claude Code, terminal-first coding agents, prompt/evaluation loops',
+    },
+    {
+      label: 'Engineering quality',
+      detail: 'code review, engineering judgement, e2e/integration testing, observability, runbooks',
+    },
+    {
+      label: 'Developer tooling',
+      detail: 'CLIs, workflow automation, agent skills, technical documentation, direct feedback',
+    },
   ],
   experience: [
     {
@@ -36,12 +39,16 @@ export const CV_DATA: CVData = {
       role: 'Senior Full Stack Engineer (Applications)',
       period: 'Oct 2025 – Present',
       bullets: [
-        'Took Agglayer UI from 0→1 as a near-sole engineer shortly after joining, shipping a production bridge experience across Polygon ecosystem apps/dapps.',
-        'Built and evolved Agglayer Dev UI (open source), a configurable bridge starter used internally and by new Agglayer chains to launch native bridging faster.',
-        'Integrated routing capabilities, including LI.FI and multihop support, to improve route flexibility and execution outcomes.',
-        'Strengthened release confidence by implementing e2e/integration test flows with funded testnet wallets, validating real onchain actions plus backend integrations.',
-        'Partnered on CI/CD and deployment workflow improvements (including Argo/Kargo release paths), moving critical checks earlier in the pipeline.',
-        'Added Datadog monitoring plus deployment/debug runbooks to reduce tribal knowledge and improve cross-team delivery consistency.',
+        'Took Agglayer UI from 0→1 as a near-sole engineer shortly after joining, shipping a production bridge experience across Polygon ecosystem apps and dapps.',
+        'Built the UI for the sPOL liquid staking launch on staking.polygon.technology, including the dPOL→sPOL migration flow.',
+        'Built and evolved Agglayer Dev UI, an open-source configurable bridge starter used internally and by new Agglayer chains to launch native bridging faster.',
+        'Integrated routing capabilities, including LI.FI and multihop support, improving route flexibility and execution outcomes for complex bridge flows.',
+        'Strengthened release confidence with e2e/integration flows using funded testnet wallets, validating real onchain actions plus backend integrations.',
+        'Turned repeated wallet/TRM pain into reusable standards: TRM docs, wallet connection guidance, and shipped internal WalletKit package that is used in all Polygon UIs.',
+        'Created early mocked previews for staking rewards/PIP85 work so leadership and stakeholders could review direction before backend and smart-contract work was fully ready.',
+        'Published internal AI workflow skills for Polygon engineering teammates, turning repeated agent/coding workflows into reusable team patterns instead of one-off prompting.',
+        'Wrote deployment/debug runbooks, backend/API overviews, and QA-facing references to reduce tribal knowledge and make cross-team delivery less fragile.',
+        'Scoped API gateway modernisation work across TypeScript migration, local Docker setup, logging/error handling, synthetic tests, and TRM caching/cost-control follow-up.',
       ],
     },
     {
@@ -50,9 +57,8 @@ export const CV_DATA: CVData = {
       period: 'Jul 2024 – Oct 2025',
       bullets: [
         'Shipped modular governance UX flows, including token wrapping and delegation, for production DAO applications.',
-        'Built composable frontend patterns that reduced integration overhead and improved delivery speed.',
-        'Partnered with protocol/backend teams to turn complex governance logic into intuitive user-facing flows.',
-        'Contributed to open-source governance tooling, including Governance UI Kit and app template initiatives.',
+        'Partnered with protocol and backend teams to turn complex governance logic into clear, composable user-facing flows.',
+        'Contributed to open-source governance tooling, including the Governance UI Kit and app template initiatives.',
       ],
     },
     {
@@ -60,10 +66,9 @@ export const CV_DATA: CVData = {
       role: 'Senior Software Engineer',
       period: 'Oct 2022 – Jul 2024',
       bullets: [
-        'Helped evolve Cielo from bot-first tooling into a broader wallet discovery and analytics platform.',
-        'Supported scaling across 16+ EVM chains with faster chain-integration workflows.',
-        'Delivered user-facing analytics and integrations used by active web3 communities.',
-        'During tenure, contributed to growth to 10k+ MAU and significant engagement uplift.',
+        'Helped evolve Cielo from bot-first tooling into a broader wallet discovery and analytics platform used by active web3 communities.',
+        'Supported expansion across 16+ EVM chains with faster integration workflows and delivered user-facing analytics for real-time NFT/token activity.',
+        'During tenure, contributed to growth to 10k+ MAU and substantial engagement uplift.',
       ],
     },
   ],
@@ -72,11 +77,52 @@ export const CV_DATA: CVData = {
     { title: 'Software Engineer, Library of Things', period: '2021' },
     { title: 'Software Engineer, North Link Digital', period: '2019–2021' },
   ],
+  toolingWork: [
+    {
+      title: 'Giles / private agent workflow system',
+      description:
+        'Personal OpenClaw-based agent stack used daily for task orchestration, memory, skills, playbooks, scheduled checks, Discord/WhatsApp workflows, and delegated sub-agent work. Private, but strong proof of practical agent workflow design beyond demo apps.',
+    },
+    {
+      title: 'OpenClaw Blackbox',
+      url: 'https://github.com/shan8851/openclaw-blackbox',
+      description:
+        'OpenClaw-native inspection reports for failed, stalled, expensive, or weird agent runs. Built around the exact problem that matters in AI engineering work: understanding what happened, where judgement failed, and what evidence supports the conclusion.',
+    },
+    {
+      title: 'Hermes Console',
+      url: 'https://github.com/shan8851/hermes-console',
+      description:
+        'Local-first dashboard for inspecting agent runtime state, sessions, crons, skills, memory, config, usage, and logs directly from disk. Focused on calm operational visibility rather than generic chatbot theatre.',
+    },
+    {
+      title: 'Runready',
+      url: 'https://github.com/shan8851/runready',
+      description:
+        'Local dev preflight CLI that checks whether a repo is ready to run before wasting time in setup loops. Encodes the sort of practical engineering checks that make agent-assisted work safer and less brittle.',
+    },
+    {
+      title: 'Companies House CLI',
+      url: 'https://github.com/shan8851/companies-house-cli',
+      description:
+        'Agent-first CLI for UK Companies House public data, with stable JSON output for company records, officers, filings, PSCs, charges, insolvency, and repeatable automation workflows. One of a suite of similar CLI tools with SKILL.md files to get up and running. All published on both npm and ClawHub.',
+    },
+    {
+      title: 'RoastMaster',
+      url: 'https://github.com/shan8851/roastmaster',
+      description:
+        'AI-powered visual comedy app using Next.js, Clerk, Stripe, Neon Postgres, Prisma, Upstash Redis, OpenRouter, and Vitest. Product-focused AI build with auth, payments, rate limits, prompt controls, and shareable output.',
+    },
+  ],
   publicWork: [
     { title: 'Agglayer UI', url: 'https://ui.agglayer.dev/' },
     { title: 'Agglayer Dev UI', url: 'https://github.com/agglayer/agglayer-dev-ui' },
     { title: 'Agglayer SDK', url: 'https://github.com/agglayer/sdk' },
-    { title: 'Cielo App', url: 'https://app.cielo.finance' },
-    { title: 'Aragon Governance UI Kit / App Template', url: 'https://blog.aragon.org/introducing-the-governance-ui-kit-and-app-template/' },
+    { title: 'Polygon Liquid Staking', url: 'https://staking.polygon.technology/lst' },
+    {
+      title: 'Aragon Governance UI Kit / App Template',
+      url: 'https://blog.aragon.org/introducing-the-governance-ui-kit-and-app-template/',
+    },
+    { title: 'Cielo Finance webapp', url: 'https://app.cielo.finance' },
   ],
 } as const;

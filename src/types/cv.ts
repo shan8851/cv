@@ -4,6 +4,11 @@ export type ContactLink = {
   readonly icon: 'email' | 'github' | 'twitter' | 'web';
 };
 
+export type CoreStrength = {
+  readonly label: string;
+  readonly detail: string;
+};
+
 export type Experience = {
   readonly company: string;
   readonly role: string;
@@ -16,6 +21,12 @@ export type EarlierRole = {
   readonly period: string;
 };
 
+export type ToolingWork = {
+  readonly title: string;
+  readonly description: string;
+  readonly url?: string;
+};
+
 export type PublicWork = {
   readonly title: string;
   readonly url: string;
@@ -26,9 +37,9 @@ export type CVData = {
   readonly title: string;
   readonly contacts: ReadonlyArray<ContactLink>;
   readonly summary: string;
-  readonly skills: ReadonlyArray<string>;
-  readonly communityAndMentorship: ReadonlyArray<string>;
+  readonly strengths: ReadonlyArray<CoreStrength>;
   readonly experience: ReadonlyArray<Experience>;
   readonly earlierRoles: ReadonlyArray<EarlierRole>;
+  readonly toolingWork: ReadonlyArray<ToolingWork>;
   readonly publicWork: ReadonlyArray<PublicWork>;
 };
